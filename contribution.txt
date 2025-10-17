@@ -1,0 +1,34 @@
+# Contribution Summary
+
+## 1. Overview
+This contribution improves the existing Password Strength Checker by adding enhanced scoring logic, common-password detection, and cleaner code structure.
+
+## 2. Changes Made
+- Replaced the old password checking logic with a modular and well-structured version.
+- Added a new function `load_common_passwords()` to read common passwords from "common.txt".
+- Removed the use of the global variable `x` and replaced it with local return values for cleaner code.
+- Added a new scoring system combining:
+  - Character class checks (uppercase, lowercase, digits, symbols)
+  - Length-based bonuses (8, 12, 16, and 20+ characters)
+- Implemented user-friendly feedback messages with emojis for visual clarity.
+- Added safety handling for missing `common.txt` file.
+- Wrapped the program in an interactive loop (`interactive_loop()`) allowing repeated checks.
+- Improved code readability with docstrings and inline comments.
+
+## 3. Purpose of the Changes
+The goal was to make the password checker:
+- More accurate in evaluating password strength.
+- Easier to maintain and extend.
+- Aligned with best coding practices (no globals, reusable functions).
+- More user-friendly and visually appealing.
+
+## 4. Testing Performed
+- Tested the script manually by entering multiple passwords with varying complexity.
+- Verified behavior when `common.txt` is missing and when common passwords are entered.
+- Checked edge cases (short passwords, only numbers, only symbols, etc.).
+- Confirmed that the interactive loop and messages display correctly.
+
+## 5. Future Suggestions
+- Add a graphical interface using `tkinter`.
+- Implement unit tests using `pytest` for automated validation.
+- Allow checking multiple passwords from a file input.
